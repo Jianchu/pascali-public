@@ -22,7 +22,7 @@ def run_inference(javac_commands,args):
 		cp = target_cp +":"+ CFI_dist + "/checker.jar:" + CFI_dist + "/plume.jar:" + \
 		     CFI_dist + "/checker-framework-inference.jar"
 		cmd = CFI_command + ["-classpath", cp, "checkers.inference.InferenceLauncher" , 
-				     "--checker" ,args.checker, "--solver", args.solver , 
+				     "--solverArgs" ,args.solverArgs, "--checker" ,args.checker, "--solver", args.solver , 
 				     "--mode" , args.mode ,"--hacks=true","--targetclasspath", target_cp, "-afud", args.afuOutputDir]
 		for java_file in jc['java_files']:
 			cmd = cmd + [java_file]				     

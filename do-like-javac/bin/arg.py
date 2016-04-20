@@ -45,6 +45,9 @@ base_group.add_argument('-s', '--solver', metavar='<solver>',
 base_group.add_argument('-afud', '--afuOutputDir', metavar='<afud>',
                         action='store',default='afud/',
                         help='Annotation File Utilities output directory')
+base_group.add_argument('-solverArgs', '--solverArgs', metavar='<solverArgs>',
+                        action='store',default='backEndType=maxsatbackend.MaxSat',
+                        help='arguments for solver')
 base_group.add_argument('-m', '--mode', metavar='<mode>',
                         action='store',default='INFER',
                         help='Modes of operation: TYPECHECK, INFER, ROUNDTRIP,ROUNDTRIP_TYPECHECK')
